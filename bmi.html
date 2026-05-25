@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BMI Calculator | FitCloud</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dashboard-pro-body">
+
+<div class="dashboard-pro-layout">
+
+    <!-- SIDEBAR (SAME AS DASHBOARD) -->
+    <div class="dashboard-pro-sidebar">
+
+        <div class="dashboard-pro-brand">💪 FitCloud</div>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="workout.html">🏋️ Workout</a>
+        <a href="bmi.html">⚖️ BMI Calculator</a>
+        <a href="water.html">💧 Water Tracker</a>
+        <a href="profile.html">👤 Profile</a>
+
+        <button onclick="logout()" class="dashboard-pro-logout">
+            🚪 Logout
+        </button>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="dashboard-pro-main">
+
+        <!-- TOP HEADER -->
+        <div class="dashboard-pro-topbar">
+
+            <div class="dashboard-pro-welcome">
+                <h2>BMI Calculator ⚖️</h2>
+                <p>Check your body mass index and health status</p>
+            </div>
+
+            <div class="dashboard-pro-clock">
+                🕒 <span id="clock">00:00:00</span>
+            </div>
+
+        </div>
+
+        <!-- BMI CARD -->
+        <div class="dashboard-pro-chart">
+
+            <h3>📊 Calculate Your BMI</h3>
+
+            <input type="number" id="weight" placeholder="Enter Weight (kg)"
+                style="width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:#1e293b;color:white;">
+
+            <input type="number" id="height" placeholder="Enter Height (cm)"
+                style="width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:#1e293b;color:white;">
+
+            <button onclick="calcBMI()"
+                style="width:100%;padding:12px;border:none;border-radius:10px;background:#22c55e;color:white;font-weight:600;cursor:pointer;">
+                Calculate BMI
+            </button>
+
+            <div id="bmiResult"
+                style="margin-top:20px;padding:15px;border-radius:10px;background:#0f172a;border:1px solid #1e293b;color:#cbd5e1;">
+                Your BMI result will appear here
+            </div>
+
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="dashboard-pro-grid">
+
+            <div class="dashboard-pro-card">
+                <h3>Underweight</h3>
+                <h2>&lt; 18.5</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Normal</h3>
+                <h2>18.5 - 24.9</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Overweight</h3>
+                <h2>25 - 29.9</h2>
+            </div>
+
+        </div>
+
+</div>
+
+<script type="module">
+
+import { signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { auth } from "./firebase.js";
+
+/* CLOCK */
+function updateClock() {
+    const now = new Date();
+
+    let h = String(now.getHours()).padStart(2, '0');
+    let m = String(now.getMinutes()).padStart(2, '0');
+    let s = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById("clock").innerText = `${h}:${m}:${s}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+/* BMI CALCULATOR */
+window.calcBMI = function () {
+
+    let w = Number(document.getElementById("weight").value);
+    let h = Number(document.getElementById("height").value) / 100;
+
+    if (!w || !h) {
+        document.getElementById("bmiResult").innerHTML = "Please enter valid values";
+        return;
+    }
+
+    let bmi = w / (h * h);
+
+    let status =
+        bmi < 18.5 ? "Underweight" :
+        bmi < 25 ? "Normal" :
+        bmi < 30 ? "Overweight" : "Obese";
+
+    document.getElementById("bmiResult").innerHTML = `
+        <b>BMI:</b> ${bmi.toFixed(2)} <br>
+        <b>Status:</b> ${status}
+    `;
+};
+
+/* LOGOUT */
+window.logout = async function () {
+    await signOut(auth);
+    window.location = "login.html";
+};
+
+</script>
+
+</body>
+</html>

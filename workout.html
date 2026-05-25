@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Workout Tracker | FitCloud</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="dashboard-pro-body">
+
+<div class="dashboard-pro-layout">
+
+    <!-- SIDEBAR (SAME AS DASHBOARD) -->
+    <div class="dashboard-pro-sidebar">
+
+        <div class="dashboard-pro-brand">💪 FitCloud</div>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="workout.html">🏋️ Workout</a>
+        <a href="bmi.html">⚖️ BMI Calculator</a>
+        <a href="water.html">💧 Water Tracker</a>
+        <a href="profile.html">👤 Profile</a>
+
+        <button onclick="logout()" class="dashboard-pro-logout">
+            🚪 Logout
+        </button>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="dashboard-pro-main">
+
+        <!-- TOP HEADER -->
+        <div class="dashboard-pro-topbar">
+
+            <div class="dashboard-pro-welcome">
+                <h2>Workout Tracker 💪</h2>
+                <p>Log your workouts and track your progress</p>
+            </div>
+
+            <div class="dashboard-pro-clock">
+                🕒 <span id="clock">00:00:00</span>
+            </div>
+
+        </div>
+
+        <!-- FORM SECTION -->
+        <div class="dashboard-pro-chart">
+
+            <h3>➕ Add Workout</h3>
+
+            <input type="text" id="type" placeholder="Workout Type"
+                style="width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:#1e293b;color:white;">
+
+            <input type="number" id="duration" placeholder="Duration (minutes)"
+                style="width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:#1e293b;color:white;">
+
+            <input type="number" id="calories" placeholder="Calories Burned"
+                style="width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:#1e293b;color:white;">
+
+            <button onclick="saveWorkout()"
+                style="width:100%;padding:12px;border:none;border-radius:10px;background:#22c55e;color:white;font-weight:600;cursor:pointer;">
+                Save Workout
+            </button>
+
+            <p id="message" style="margin-top:10px;color:#94a3b8;"></p>
+
+        </div>
+
+        <!-- QUICK STATS -->
+        <div class="dashboard-pro-grid">
+
+            <div class="dashboard-pro-card">
+                <h3>Total Workouts</h3>
+                <h2 id="totalWorkouts">0</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Calories Burned</h3>
+                <h2 id="totalCalories">0</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Total Minutes</h3>
+                <h2 id="totalTime">0</h2>
+            </div>
+
+        </div>
+
+        <!-- BACK BUTTON -->
+        <div class="dashboard-pro-copyright">
+            <a href="dashboard.html" style="color:#22c55e;text-decoration:none;">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script type="module" src="workout.js"></script>
+
+</body>
+</html>

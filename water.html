@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Water Tracker | FitCloud</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dashboard-pro-body">
+
+<div class="dashboard-pro-layout">
+
+    <!-- SIDEBAR -->
+    <div class="dashboard-pro-sidebar">
+
+        <div class="dashboard-pro-brand">💪 FitCloud</div>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="workout.html">🏋️ Workout</a>
+        <a href="bmi.html">⚖️ BMI Calculator</a>
+        <a href="water.html">💧 Water Tracker</a>
+        <a href="profile.html">👤 Profile</a>
+
+        <button onclick="logout()" class="dashboard-pro-logout">
+            🚪 Logout
+        </button>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="dashboard-pro-main">
+
+        <!-- TOP HEADER -->
+        <div class="dashboard-pro-topbar">
+
+            <div class="dashboard-pro-welcome">
+                <h2>Water Tracker 💧</h2>
+                <p>Stay hydrated and track your daily water intake</p>
+            </div>
+
+            <!-- CLOCK -->
+            <div class="dashboard-pro-clock">
+                🕒 <span id="clock">00:00:00</span>
+            </div>
+
+        </div>
+
+        <!-- WATER TRACKER CARD -->
+        <div class="dashboard-pro-chart">
+
+            <h3>💧 Daily Water Intake</h3>
+
+            <p style="margin-top:10px;color:#cbd5e1;">
+                Click below to add water intake (in ml)
+            </p>
+
+            <input 
+                type="number" 
+                id="waterAmount" 
+                placeholder="Enter water (ml)"
+                style="width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:#1e293b;color:white;"
+            >
+
+            <button 
+                onclick="addWater()"
+                style="width:100%;padding:12px;border:none;border-radius:10px;background:#3b82f6;color:white;font-weight:600;cursor:pointer;"
+            >
+                + Add Water
+            </button>
+
+            <p id="message" style="margin-top:10px;color:#94a3b8;"></p>
+
+            <div 
+                id="todayWater"
+                style="margin-top:20px;padding:15px;border-radius:10px;background:#0f172a;border:1px solid #1e293b;color:#cbd5e1;"
+            >
+                0 ml
+            </div>
+
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="dashboard-pro-grid">
+
+            <div class="dashboard-pro-card">
+                <h3>Recommended</h3>
+                <h2>2000 ml</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Target Goal</h3>
+                <h2>2500 ml</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Status</h3>
+                <h2 id="status">Need more 💧</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Total Glasses</h3>
+                <h2 id="totalGlasses">0</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="water.js"></script>
+
+</body>
+</html>
+```

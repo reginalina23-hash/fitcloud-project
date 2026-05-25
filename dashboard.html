@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FitCloud Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="dashboard-pro-body">
+
+<div class="dashboard-pro-layout">
+
+    <!-- SIDEBAR -->
+    <div class="dashboard-pro-sidebar">
+
+        <div class="dashboard-pro-brand">💪 FitCloud</div>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="workout.html">🏋️ Workout</a>
+        <a href="bmi.html">⚖️ BMI Calculator</a>
+        <a href="water.html">💧 Water Tracker</a>
+        <a href="profile.html">👤 Profile</a>
+
+        <button onclick="logout()" class="dashboard-pro-logout">
+            🚪 Logout
+        </button>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="dashboard-pro-main">
+
+        <!-- TOP HEADER -->
+        <div class="dashboard-pro-topbar">
+
+            <div class="dashboard-pro-welcome">
+                <h2>Welcome Back 👋</h2>
+                <p>Track your fitness journey today</p>
+            </div>
+
+            <!-- LIVE DIGITAL CLOCK -->
+            <div class="dashboard-pro-clock">
+                🕒 <span id="clock">00:00:00</span>
+            </div>
+
+        </div>
+
+        <!-- HERO -->
+        <div class="dashboard-pro-hero">
+
+            <div class="dashboard-pro-hero-overlay">
+
+                <h1>Train Hard. Stay Strong.</h1>
+
+                <p>
+                    Your personalized fitness dashboard helps you track workouts, calories, and progress in real time.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="dashboard-pro-grid">
+
+            <div class="dashboard-pro-card">
+                <h3>Calories Burned</h3>
+                <h2 id="cal">0</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Total Workout Time</h3>
+                <h2 id="time">0 min</h2>
+            </div>
+
+            <div class="dashboard-pro-card">
+                <h3>Sessions</h3>
+                <h2 id="count">0</h2>
+            </div>
+
+        </div>
+
+        <!-- CHART -->
+        <div class="dashboard-pro-chart">
+            <h3>Progress Overview</h3>
+            <canvas id="chart"></canvas>
+        </div>
+
+    </div>
+</div>
+
+<script type="module">
+
+import { db, auth } from "./firebase.js";
+
+import {
+    collection,
+    query,
+    where,
+    onSnapshot
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+import {
+    signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+/* =========================
+   LIVE DIGITAL CLOCK
+========================= */
+function updateClock() {
+
+    const now = new Date();
+
+    let h = String(now.getHours()).padStart(2, '0');
+    let m = String(now.getMinutes()).padStart(2, '0');
+    let s = String(now.getSeconds()).padStart(2, '0');
+
+    document.getElementById("clock").innerText =
+        `${h}:${m}:${s}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+
+/* =========================
+   LOAD CURRENT USER DATA ONLY
+========================= */
+function loadDashboard(user) {
+
+    const q = query(
+        collection(db, "workouts"),
+        where("uid", "==", user.uid)
+    );
+
+    onSnapshot(q, (snap) => {
+
+        let cal = 0;
+        let time = 0;
+
+        snap.forEach((doc) => {
+
+            const data = doc.data();
+
+            cal += Number(data.cal || 0);
+            time += Number(data.time || 0);
+        });
+
+        document.getElementById("cal").innerText = cal;
+
+        document.getElementById("time").innerText =
+            time + " min";
+
+        document.getElementById("count").innerText =
+            snap.size;
+
+        renderChart(cal, time);
+    });
+}
+
+
+/* =========================
+   CHART
+========================= */
+let chart;
+
+function renderChart(cal, time) {
+
+    if (chart) {
+        chart.destroy();
+    }
+
+    chart = new Chart(
+        document.getElementById("chart"),
+        {
+            type: "doughnut",
+
+            data: {
+
+                labels: [
+                    "Calories",
+                    "Workout Time"
+                ],
+
+                datasets: [{
+                    data: [cal, time],
+
+                    backgroundColor: [
+                        "#22c55e",
+                        "#3b82f6"
+                    ]
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        }
+    );
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+window.logout = async function () {
+
+    await signOut(auth);
+
+    sessionStorage.clear();
+    localStorage.clear();
+
+    window.location.href = "login.html";
+};
+
+
+/* =========================
+   WAIT FOR LOGIN
+========================= */
+auth.onAuthStateChanged((user) => {
+
+    if (!user) {
+
+        window.location.href = "login.html";
+        return;
+    }
+
+    loadDashboard(user);
+});
+
+</script>
+
+</body>
+</html>

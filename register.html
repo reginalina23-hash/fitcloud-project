@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TOP HEADER -->
+
+    <div class="register-top-box">
+
+        <div class="top-navbar">
+
+            <div class="logo">
+                🏋️ FitCloud
+            </div>
+
+            <div class="top-icons">
+
+                <span>☰</span>
+
+                <span>📞</span>
+
+                <span>🌐 EN</span>
+
+            </div>
+
+        </div>
+
+        <h1>Create Account</h1>
+
+        <p>
+            Start your fitness journey and track your health professionally.
+        </p>
+
+    </div>
+
+    <!-- REGISTER CARD -->
+
+    <div class="register-card">
+
+        <h2>Register</h2>
+
+        <input 
+        id="fullname" 
+        type="text" 
+        placeholder="Full Name"
+        >
+
+        <input 
+        id="age" 
+        type="number" 
+        placeholder="Age"
+        >
+
+        <select id="gender">
+
+            <option value="">Select Gender</option>
+
+            <option>Male</option>
+
+            <option>Female</option>
+
+        </select>
+
+        <input 
+        id="weight" 
+        type="number" 
+        placeholder="Weight (KG)"
+        >
+
+        <input 
+        id="height" 
+        type="number" 
+        placeholder="Height (CM)"
+        >
+
+        <select id="goal">
+
+            <option value="">Fitness Goal</option>
+
+            <option>Weight Loss</option>
+
+            <option>Muscle Gain</option>
+
+            <option>Stay Fit</option>
+
+            <option>Cardio Training</option>
+
+        </select>
+
+        <input 
+        id="email" 
+        type="email" 
+        placeholder="Email Address"
+        >
+
+        <input 
+        id="password" 
+        type="password" 
+        placeholder="Password"
+        >
+
+        <button 
+        class="register-btn"
+        onclick="register()"
+        >
+            Create Account
+        </button>
+
+        <button 
+        class="back-login-btn"
+        onclick="window.location.href='login.html'"
+        >
+            Back to Login
+        </button>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+
+    <div class="register-bottom-box">
+
+        © 2026 FitCloud System. All Rights Reserved.
+
+    </div>
+
+</div>
+
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>

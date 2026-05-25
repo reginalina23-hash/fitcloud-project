@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mobile Fitness Tracking</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="overlay">
+
+    <div class="container">
+
+
+<div class="top-box">
+
+    <div class="top-navbar">
+
+        <div class="logo">
+            🏋️ FitCloud
+        </div>
+
+        <div class="top-icons">
+
+            <span>☰</span>
+
+            <span>📞</span>
+
+            <span>🌐 EN</span>
+
+        </div>
+
+    </div>
+
+    <h1>Mobile Fitness Tracking</h1>
+
+    <p>
+        Stay healthy, stay strong, and track your fitness journey anytime anywhere.
+    </p>
+
+</div>
+
+
+      <!-- LOGIN CARD -->
+
+      <div class="card">
+
+        <h2>Login</h2>
+
+        <!-- EMAIL -->
+
+        <input 
+        id="email" 
+        type="email" 
+        placeholder="Email Address"
+        >
+
+        <!-- PASSWORD -->
+
+        <input 
+        id="password" 
+        type="password" 
+        placeholder="Password"
+        >
+
+        <!-- LOGIN BUTTON -->
+
+        <button class="login-btn" onclick="login()">
+          Login
+        </button>
+
+        <!-- SIGN UP BUTTON -->
+
+        <button 
+        class="signup-btn"
+        onclick="window.location.href='register.html'"
+        >
+          Sign Up
+        </button>
+
+        <!-- FORGOT PASSWORD -->
+
+        <div class="links">
+
+          <a href="forgot.html">
+            Forgot Password?
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT BOX -->
+
+      <div class="bottom-box">
+
+        © 2026 FitCloud System. All Rights Reserved.
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="auth.js"></script>
+
+</body>
+
+</html>
+

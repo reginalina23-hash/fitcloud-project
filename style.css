@@ -1,0 +1,1632 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* BODY */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75),
+    rgba(0,0,0,0.75)),
+
+    url('https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1974');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+/* CONTAINER */
+
+.container{
+
+    width:100%;
+
+    max-width:500px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-align:center;
+}
+
+/* TOP BOX */
+
+.top-box{
+
+    width:305%;
+
+    background:rgba(15,23,42,0.92);
+
+    padding:25px 35px;
+
+    border-radius:25px;
+
+    margin-bottom:5px;
+
+    margin-top:-20px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+}
+
+
+.top-box h1{
+
+    color:white;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:12px;
+}
+
+.top-box p{
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    line-height:1.6;
+}
+
+/* LOGIN CARD */
+
+.card{
+
+    background:rgba(15,23,42,0.94);
+
+    padding:35px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:20px;
+}
+
+/* LOGIN TITLE */
+
+.card h2{
+
+    color:white;
+
+    font-size:30px;
+
+    margin-bottom:25px;
+}
+
+/* INPUT BOX */
+
+.card input{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+}
+
+.card input::placeholder{
+
+    color:#94a3b8;
+}
+
+.card input:focus{
+
+    border:1px solid #22c55e;
+}
+
+/* BUTTONS */
+
+.login-btn,
+.signup-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    margin-top:10px;
+
+    transition:0.3s;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn{
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+    color:white;
+}
+
+.login-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(34,197,94,0.4);
+}
+
+/* SIGNUP BUTTON */
+
+.signup-btn{
+
+    background:white;
+
+    color:#0f172a;
+}
+
+.signup-btn:hover{
+
+    transform:translateY(-2px);
+}
+
+/* LINKS */
+
+.links{
+
+    margin-top:22px;
+}
+
+.links a{
+
+    color:#22c55e;
+
+    text-decoration:none;
+
+    font-size:14px;
+}
+
+.links a:hover{
+
+    text-decoration:underline;
+}
+
+/* TOP NAVBAR */
+
+.top-navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:-20px;
+}
+
+/* LOGO */
+
+.logo{
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:700;
+}
+
+/* ICONS */
+
+.top-icons{
+
+    display:flex;
+
+    gap:15px;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+.top-icons span{
+
+    transition:0.3s;
+}
+
+.top-icons span:hover{
+
+    color:#22c55e;
+
+    transform:scale(1.1);
+}
+
+
+/* COPYRIGHT */
+
+.bottom-box{
+
+    width:305%;
+
+    background:rgba(15,23,42,0.92);
+
+    padding:20px 35px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    text-align:center;
+
+
+margin-top:10px;
+
+
+}
+
+/* =========================
+   FORGOT PAGE HEADER
+========================= */
+
+.forgot-top-box{
+
+    width:302%;
+
+    background:rgba(15,23,42,0.92);
+
+    padding:10px 35px;
+
+    border-radius:25px;
+
+    margin-bottom:100px;
+
+    margin-top:-15px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+}
+
+.forgot-top-box h1{
+
+    color:white;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    margin-top:20px;
+
+    margin-bottom:15px;
+}
+
+.forgot-top-box p{
+
+    color:#cbd5e1;
+
+    font-size:18px;
+
+    line-height:1.6;
+}
+
+/* =========================
+   FORGOT PAGE FOOTER
+========================= */
+
+.forgot-bottom-box{
+
+    width:302%;
+
+    background:rgba(15,23,42,0.92);
+
+    padding:20px 35px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    text-align:center;
+
+
+margin-top:20px;
+
+
+}
+
+/* =========================
+   REGISTER PAGE HEADER
+========================= */
+
+.register-top-box{
+
+    width:302%;
+
+    background:rgba(15,23,42,0.92);
+
+    padding:15px 35px;
+
+    border-radius:25px;
+
+    margin-bottom:25px;
+
+    margin-top:-15px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+}
+
+.register-top-box h1{
+
+    color:white;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-top:20px;
+
+    margin-bottom:15px;
+}
+
+.register-top-box p{
+
+    color:#cbd5e1;
+
+    font-size:16px;
+
+    line-height:1.6;
+}
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.register-card{
+
+    background:rgba(15,23,42,0.94);
+
+    padding:35px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:20px;
+
+    width:100%;
+}
+
+.register-card h2{
+
+    color:white;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+}
+
+/* REGISTER INPUT */
+
+.register-card input,
+.register-card select{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:15px;
+
+    outline:none;
+}
+
+.register-card input::placeholder{
+
+    color:#94a3b8;
+}
+
+.register-card input:focus,
+.register-card select:focus{
+
+    border:1px solid #22c55e;
+}
+
+/* REGISTER BUTTON */
+
+.register-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    margin-top:10px;
+
+    transition:0.3s;
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+
+    color:white;
+}
+
+.register-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(34,197,94,0.4);
+}
+
+/* BACK LOGIN BUTTON */
+
+.back-login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    margin-top:12px;
+
+    transition:0.3s;
+
+    background:white;
+
+    color:#0f172a;
+}
+
+.back-login-btn:hover{
+
+    transform:translateY(-2px);
+}
+
+/* =========================
+   REGISTER FOOTER
+========================= */
+
+.register-bottom-box{
+
+    width:302%;
+
+    background:rgba(15,23,42,0.92);
+
+    padding:20px 35px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(12px);
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    text-align:center;
+
+    margin-top:20px;
+}
+/* =========================
+   WELCOME SCREEN (NEW STYLE)
+========================= */
+
+.welcome-screen{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:
+    linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1974');
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* CENTER GLASS BOX */
+.welcome-box{
+
+    width:100%;
+    max-width:520px;
+
+    background:rgba(15,23,42,0.88);
+
+    padding:45px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+
+    backdrop-filter:blur(14px);
+
+    text-align:center;
+
+    color:white;
+
+    animation:fadeUp 0.8s ease;
+}
+
+/* LOGO */
+.welcome-box .logo{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+/* TITLE */
+.welcome-box h1{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+/* MOTIVATION TEXT */
+.motivation{
+    font-size:16px;
+    color:#ffffff;
+    font-weight:500;
+    margin-bottom:10px;
+}
+
+/* SUB TEXT */
+.sub-text{
+    font-size:14px;
+    color:#cbd5e1;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+.welcome-box button{
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:14px;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:white;
+
+    transition:0.3s;
+}
+
+.welcome-box button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(34,197,94,0.4);
+}
+
+/* FOOTER QUOTE */
+.footer-text{
+    margin-top:18px;
+    font-size:13px;
+    color:#94a3b8;
+    font-style:italic;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* BODY */
+.dashboard-pro-body{
+    background:#0b1220;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* LAYOUT */
+.dashboard-pro-layout{
+    display:flex;
+    min-height:100vh;
+    width:100%;
+}
+
+/* SIDEBAR */
+.dashboard-pro-sidebar{
+    width:260px;
+    background:#0f172a;
+    padding:20px;
+    border-right:1px solid #1e293b;
+
+    display:flex;
+    flex-direction:column;
+
+    position:sticky;
+    top:0;
+}
+
+.dashboard-pro-brand{
+    font-size:22px;
+    font-weight:700;
+    color:#22c55e;
+    margin-bottom:30px;
+}
+
+.dashboard-pro-sidebar a{
+    text-decoration:none;
+    color:white;
+
+    padding:12px;
+    margin:6px 0;
+
+    border-radius:10px;
+    border:1px solid #1e293b;
+
+    transition:0.3s;
+}
+
+.dashboard-pro-sidebar a:hover{
+    background:#22c55e;
+    transform:translateX(5px);
+}
+
+.dashboard-pro-logout{
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+}
+
+/* MAIN */
+.dashboard-pro-main{
+    flex:1;
+    padding:20px;
+}
+
+/* TOPBAR */
+.dashboard-pro-topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.dashboard-pro-welcome h2{
+    font-size:22px;
+}
+
+.dashboard-pro-welcome p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* CLOCK */
+.dashboard-pro-clock{
+    background:#111827;
+    padding:10px 15px;
+    border-radius:10px;
+    border:1px solid #1e293b;
+    color:#22c55e;
+    font-weight:600;
+}
+
+/* HERO */
+.dashboard-pro-hero{
+    height:200px;
+    background:url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1974");
+    background-size:cover;
+    background-position:center;
+    border-radius:18px;
+    position:relative;
+    margin-bottom:20px;
+}
+
+.dashboard-pro-hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    border-radius:18px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:20px;
+}
+
+.dashboard-pro-hero h1{
+    font-size:28px;
+}
+
+.dashboard-pro-hero p{
+    color:#cbd5e1;
+    margin-top:10px;
+}
+
+/* STATS */
+.dashboard-pro-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.dashboard-pro-card{
+    background:#111827;
+    padding:20px;
+    border-radius:16px;
+    border:1px solid #1e293b;
+}
+
+.dashboard-pro-card h2{
+    color:#22c55e;
+    margin-top:10px;
+}
+
+/* CHART */
+.dashboard-pro-chart{
+    margin-top:20px;
+    background:#111827;
+    padding:20px;
+    border-radius:16px;
+    border:1px solid #1e293b;
+}
+
+.dashboard-pro-chart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* chart box size */
+.dashboard-pro-chart canvas{
+    width: 1000px !important;
+    height: 400px !important;
+}
+
+/* FOOTER */
+.dashboard-pro-copyright{
+    margin-top:30px;
+    background:rgba(15,23,42,0.92);
+    padding:16px 20px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.08);
+    text-align:center;
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+
+    .dashboard-pro-layout{
+        flex-direction:column;
+    }
+
+    .dashboard-pro-sidebar{
+        width:100%;
+        flex-direction:row;
+        overflow-x:auto;
+    }
+
+    .dashboard-pro-sidebar a{
+        flex:1;
+        text-align:center;
+        white-space:nowrap;
+    }
+
+    .dashboard-pro-grid{
+        grid-template-columns:1fr;
+    }
+}
+/* =========================
+   WORKOUT PRO CSS - FITCLOUD
+   FULL MATCH WITH YOUR HTML
+========================= */
+
+/* RESET */
+.workout-pro-body *{
+    margin:0;
+    padding:10px 15px;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* BODY */
+.workout-pro-body{
+    min-height:100vh;
+    display:flex;
+    background:#0b1220;
+    color:white;
+    overflow-x:hidden;
+    left:50px;          /* 👈 stick to left */
+}
+/* SIDEBAR */
+.workout-pro-sidebar{
+    width:260px;
+    background:#0f172a;
+    padding:20px;
+    border-right:1px solid #1e293b;
+
+    display:flex;
+    flex-direction:column;
+
+    position:fixed;   /* 👈 key fix */
+    top:0;            /* 👈 stick to top */
+    left:0;          /* 👈 stick to left */
+    height:100vh;    /* 👈 full screen height */
+}
+
+.workout-pro-brand{
+    font-size:22px;
+    font-weight:700;
+    color:#22c55e;
+    margin-bottom:30px;
+}
+
+.workout-pro-sidebar a{
+    text-decoration:none;
+    color:white;
+
+    padding:12px;
+    margin:6px 0;
+
+    border-radius:10px;
+    border:1px solid #1e293b;
+
+    transition:0.3s;
+}
+
+.workout-pro-sidebar a:hover{
+    background:#22c55e;
+    transform:translateX(5px);
+}
+
+.workout-pro-logout{
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+}
+
+/* MAIN */
+.workout-pro-main{
+    flex:1;
+    padding:25px;
+    width:100%;
+}
+
+/* HEADER */
+.workout-pro-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.workout-pro-header h1{
+    font-size:26px;
+}
+
+.workout-pro-header p{
+    color:#94a3b8;
+    font-size:14px;
+    margin-top:5px;
+}
+
+/* BADGE */
+.workout-pro-badge{
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    padding:10px 14px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* STATS GRID */
+.workout-pro-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.workout-pro-card{
+    background:#111827;
+    padding:18px;
+    border-radius:14px;
+    border:1px solid #1e293b;
+}
+
+.workout-pro-card h2{
+    color:#22c55e;
+    margin-top:10px;
+}
+
+/* FORM BOX */
+.workout-pro-form{
+    background:#111827;
+    padding:25px;
+    border-radius:16px;
+    border:1px solid #1e293b;
+
+    max-width:600px;
+}
+
+/* FORM TITLE */
+.workout-pro-form h2{
+    margin-bottom:15px;
+}
+
+/* INPUTS */
+.workout-pro-form input{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#1e293b;
+    color:white;
+
+    outline:none;
+}
+
+.workout-pro-form input::placeholder{
+    color:#94a3b8;
+}
+
+.workout-pro-form input:focus{
+    border:1px solid #22c55e;
+}
+
+/* SAVE BUTTON */
+.workout-pro-form button{
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.workout-pro-form button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(34,197,94,0.4);
+}
+
+/* MESSAGE */
+.workout-pro-form p{
+    margin-top:10px;
+    font-size:14px;
+    color:#22c55e;
+}
+
+/* ACTION BUTTONS */
+.workout-pro-actions{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+}
+
+.back-btn,
+.history-btn{
+    flex:1;
+    padding:12px;
+
+    border:none;
+    border-radius:12px;
+
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    background:#ffffff;
+    color:#0b1220;
+}
+
+/* HISTORY BUTTON */
+.history-btn{
+    background:#22c55e;
+    color:white;
+}
+
+.back-btn:hover,
+.history-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .workout-pro-body{
+        flex-direction:column;
+    }
+
+    .workout-pro-sidebar{
+        width:100%;
+        flex-direction:row;
+        overflow-x:auto;
+    }
+
+    .workout-pro-sidebar a{
+        flex:1;
+        text-align:center;
+        white-space:nowrap;
+    }
+
+    .workout-pro-stats{
+        grid-template-columns:1fr;
+    }
+
+    .workout-pro-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .workout-pro-actions{
+        flex-direction:column;
+    }
+}
+
+/* =========================
+   BMI PRO - FITCLOUD
+========================= */
+
+/* BODY */
+.bmi-pro-body{
+    min-height:100vh;
+    display:flex;
+    background:#0b1220;
+    color:white;
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* SIDEBAR (SAME AS DASHBOARD) */
+.bmi-pro-sidebar{
+    width:260px;
+    background:#0f172a;
+    padding:20px;
+    border-right:1px solid #1e293b;
+
+    display:flex;
+    flex-direction:column;
+
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+}
+
+.bmi-pro-brand{
+    font-size:22px;
+    font-weight:700;
+    color:#22c55e;
+    margin-bottom:30px;
+}
+
+.bmi-pro-sidebar a{
+    text-decoration:none;
+    color:white;
+    padding:12px;
+    margin:6px 0;
+    border-radius:10px;
+    border:1px solid #1e293b;
+    transition:0.3s;
+}
+
+.bmi-pro-sidebar a:hover{
+    background:#22c55e;
+    transform:translateX(5px);
+}
+
+/* MAIN AREA */
+.bmi-pro-main{
+    flex:1;
+    margin-left:260px;
+    padding:25px;
+    width:100%;
+}
+
+/* HEADER */
+.bmi-pro-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.bmi-pro-header h1{
+    font-size:26px;
+}
+
+.bmi-pro-header p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* BADGE */
+.bmi-pro-badge{
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    padding:10px 14px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* GRID */
+.bmi-pro-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.bmi-pro-card{
+    background:#111827;
+    padding:18px;
+    border-radius:14px;
+    border:1px solid #1e293b;
+}
+
+.bmi-pro-card h2{
+    color:#22c55e;
+    margin-top:10px;
+}
+
+/* FORM */
+.bmi-pro-form{
+    background:#111827;
+    padding:25px;
+    border-radius:16px;
+    border:1px solid #1e293b;
+    max-width:500px;
+}
+
+/* INPUT */
+.bmi-pro-form input{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+
+    border:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:white;
+    outline:none;
+}
+
+.bmi-pro-form input::placeholder{
+    color:#94a3b8;
+}
+
+.bmi-pro-form input:focus{
+    border:1px solid #22c55e;
+}
+
+/* BUTTON */
+.bmi-pro-form button{
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.bmi-pro-form button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(34,197,94,0.4);
+}
+
+/* RESULT */
+.bmi-pro-result{
+    margin-top:15px;
+    padding:12px;
+    border-radius:10px;
+    background:#0f172a;
+    border:1px solid #1e293b;
+    color:#22c55e;
+}
+
+/* ACTION BUTTONS */
+.bmi-pro-actions{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+}
+
+.bmi-back-btn{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#0b1220;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.bmi-back-btn:hover{
+    transform:translateY(-2px);
+}
+
+.bmi-history-btn{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:#22c55e;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.bmi-history-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+    .bmi-pro-grid{
+        grid-template-columns:1fr;
+    }
+
+    .bmi-pro-main{
+        margin-left:0;
+    }
+
+    .bmi-pro-sidebar{
+        position:relative;
+        width:100%;
+        flex-direction:row;
+        overflow-x:auto;
+    }
+
+    .bmi-pro-sidebar a{
+        flex:1;
+        text-align:center;
+    }
+}
+
+/* =========================
+   WATER PRO - FITCLOUD (FIXED UNIFIED STYLE)
+========================= */
+
+/* BODY */
+.water-pro-body{
+    min-height:100vh;
+    display:flex;
+    background:#0b1220;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
+
+/* LAYOUT */
+.water-pro-layout{
+    display:flex;
+    width:100%;
+}
+
+/* SIDEBAR (SAME AS DASHBOARD/BMI/WORKOUT) */
+.water-pro-sidebar{
+    width:260px;
+    background:#0f172a;
+    padding:20px;
+    border-right:1px solid #1e293b;
+
+    display:flex;
+    flex-direction:column;
+
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+}
+
+.water-pro-brand{
+    font-size:22px;
+    font-weight:700;
+    color:#22c55e;
+    margin-bottom:30px;
+}
+
+.water-pro-sidebar a{
+    text-decoration:none;
+    color:white;
+    padding:12px;
+    margin:6px 0;
+    border-radius:10px;
+    border:1px solid #1e293b;
+    transition:0.3s;
+}
+
+.water-pro-sidebar a:hover{
+    background:#22c55e;
+    transform:translateX(5px);
+}
+
+/* MAIN (IMPORTANT FIX) */
+.water-pro-main{
+    flex:1;
+    margin-left:260px;   /* 🔥 THIS FIX ALIGNMENT */
+    padding:25px;
+}
+
+/* HEADER */
+.water-pro-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.water-pro-header h1{
+    font-size:26px;
+}
+
+.water-pro-header p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* BADGE */
+.water-pro-badge{
+    background:linear-gradient(135deg,#3b82f6,#06b6d4);
+    padding:10px 14px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:600;
+}
+
+/* GRID (SAME STYLE AS OTHERS) */
+.water-pro-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.water-pro-card{
+    background:#111827;
+    padding:18px;
+    border-radius:14px;
+    border:1px solid #1e293b;
+}
+
+.water-pro-card h2{
+    color:#3b82f6;
+    margin-top:10px;
+}
+
+/* FORM */
+.water-pro-form{
+    background:#111827;
+    padding:25px;
+    border-radius:16px;
+    border:1px solid #1e293b;
+    max-width:500px;
+}
+
+/* INPUT */
+.water-pro-form input{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+    border:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:white;
+    outline:none;
+}
+
+.water-pro-form input:focus{
+    border:1px solid #3b82f6;
+}
+
+/* BUTTON */
+.water-pro-form button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#3b82f6,#06b6d4);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.water-pro-form button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(59,130,246,0.4);
+}
+
+/* MESSAGE */
+.water-pro-form p{
+    margin-top:10px;
+    color:#3b82f6;
+}
+
+/* RESPONSIVE (SAME PATTERN AS OTHERS) */
+@media(max-width:1024px){
+
+    .water-pro-sidebar{
+        position:relative;
+        width:100%;
+        flex-direction:row;
+        overflow-x:auto;
+    }
+
+    .water-pro-sidebar a{
+        flex:1;
+        text-align:center;
+        white-space:nowrap;
+    }
+
+    .water-pro-main{
+        margin-left:0;
+    }
+
+    .water-pro-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:500px){
+
+    .top-box h1{
+
+        font-size:30px;
+    }
+
+    .card{
+
+        padding:25px;
+    }
+
+}

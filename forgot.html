@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Forgot Password</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TOP BOX -->
+
+    <div class="forgot-top-box">
+
+        <div class="top-navbar">
+
+            <div class="logo">
+                🏋️ FitCloud
+            </div>
+
+            <div class="top-icons">
+
+                <span>☰</span>
+
+                <span>📞</span>
+
+                <span>🌐 EN</span>
+
+            </div>
+
+        </div>
+
+        <h1>Reset Password</h1>
+
+        <p>
+            Enter your email address to receive a password reset link.
+        </p>
+
+    </div>
+
+    <!-- RESET CARD -->
+
+    <div class="card">
+
+        <h2>Forgot Password</h2>
+
+        <input 
+        id="email" 
+        type="email" 
+        placeholder="Enter Email Address"
+        >
+
+        <button 
+        class="login-btn"
+        onclick="resetPassword()"
+        >
+            Send Reset Link
+        </button>
+
+        <button 
+        class="signup-btn"
+        onclick="window.location.href='login.html'"
+        >
+            Back to Login
+        </button>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+
+    <div class="forgot-bottom-box">
+
+        © 2026 FitCloud System. All Rights Reserved.
+
+    </div>
+
+</div>
+
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>
